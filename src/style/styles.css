@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+.card {
+  cursor: pointer;
+  min-height: 300px;
+}
+
+.card .card-img-top {
+  transition: all 0.5s ease-in-out 0s;
+  height: 200px;
+}
+
+@media screen and (max-width: 550px) {
+  .card {
+    min-height: 260px;
+    padding-bottom: 4rem !important;
+  }
+  .card .card-img-top {
+    height: 140px;
+  }
+}
+
+.view-more-btn {
+  font-size: 12px;
+  line-height: 16px;
+  padding-left: 5rem !important;
+  padding-right: 5rem !important;
+  transition: all 0.5s ease 0s;
+}
+
+.view-more-btn:hover {
+  color: #f38300 !important;
+  border-color: #f38300 !important;
+}
+
+.plus-btn {
+  background-color: #f38300;
+  width: 32px;
+  height: 32px;
+  font-size: 24px;
+  align-items: center;
+}
+
+.checkout-btn {
+  font-size: 12px;
+  line-height: 16px;
+  padding-left: 8rem !important;
+  padding-right: 8rem !important;
+  transition: all 0.5s ease 0s;
+  background-color: #f38300 !important;
+}
+
+.checkout-btn:hover {
+  background-color: #ce6f00 !important;
+}
+
+.card-focus {
+  filter: brightness(0.5);
+}
+
+.product-image {
+  width: 70px;
+  height: 50px;
+  border-radius: 8px;
+}
+
+.product-name {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.text-blue {
+  color: #1d9ebc !important;
+}
+
+.font-roboto {
+  font-family: "Roboto" sans-serif;
+}
+
+.logo {
+  max-height: 40px;
+  max-width: 150px;
+}
