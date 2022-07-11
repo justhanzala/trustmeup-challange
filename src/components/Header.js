@@ -10,6 +10,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 const Header = () => {
   const [isSmallScreen, setIsSmallScreen] = React.useState(false);
   const { cartData } = useSelector((state) => state.product);
+  const isBrowser = typeof window !== "undefined" ? window : {};
 
   const nav = [
     {
@@ -23,7 +24,7 @@ const Header = () => {
   ];
 
   React.useEffect(() => {
-    const currentWidth = window.innerWidth;
+    const currentWidth = isBrowser.innerWidth;
     if (currentWidth < 550) {
       setIsSmallScreen(true);
     } else {
@@ -33,7 +34,7 @@ const Header = () => {
 
   React.useEffect(() => {
     const handleResize = () => {
-      const currentWidth = window.innerWidth;
+      const currentWidth = isBrowser.innerWidth;
       if (currentWidth < 550) {
         setIsSmallScreen(true);
       } else {
@@ -41,9 +42,9 @@ const Header = () => {
       }
     };
 
-    window.addEventListener("resize", handleResize, { passive: true });
+    isBrowser.addEventListener("resize", handleResize, { passive: true });
 
-    return () => window.removeEventListener("resize", handleResize);
+    return () => isBrowser.removeEventListener("resize", handleResize);
   }, [isSmallScreen]);
 
   return (
