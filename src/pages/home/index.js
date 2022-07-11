@@ -53,12 +53,14 @@ const Home = () => {
         <p className="font-roboto fw-bold">Choose your product</p>
       </div>
       {loading ? (
-        <div
-          className="spinner-border text-center"
-          style={{ width: "3rem", height: "3rem" }}
-          role="status"
-        >
-          <span className="visually-hidden">Loading...</span>
+        <div className="w-100 text-center">
+          <div
+            className="spinner-border text-center"
+            style={{ width: "3rem", height: "3rem", justifyContent: "center" }}
+            role="status"
+          >
+            <span className="visually-hidden">Loading...</span>
+          </div>
         </div>
       ) : (
         <>
