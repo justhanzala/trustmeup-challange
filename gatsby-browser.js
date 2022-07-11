@@ -3,5 +3,5 @@ import { Provider } from "react-redux";
 import store from "./src/redux";
 
 export const wrapRootElement = ({ element }) => {
-  return <Provider store={store}>{element}</Provider>;
+  return <Provider store={store || {}}>{element}</Provider>;
 };
